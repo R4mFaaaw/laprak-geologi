@@ -1,29 +1,32 @@
 # Riana's GeoGarden
 
-Website belajar Geologi Struktur personal untuk Riana Amelia, berdasarkan laporan praktikum yang diunggah.
+Website belajar Geologi Struktur untuk Riana Amelia. Dibuat sebagai frontend statis yang dapat di-host di Vercel.
 
-## Menjalankan secara lokal
-Cukup buka `index.html` di browser. Untuk pengalaman development yang lebih baik, gunakan ekstensi Live Server di VS Code.
+## Isi proyek
+- `index.html` — struktur halaman (dipertahankan dari versi sebelumnya).
+- `styles.css` — desain pastel biru langit dan kupu-kupu (dipertahankan dari versi sebelumnya).
+- `app.js` — materi, kuis, flashcard, permainan, serta penyimpanan progres.
+
+## Pembaruan materi dan latihan
+- 13 topik materi, termasuk hangingwall, footwall, bagian-bagian lipatan, jenis sesar, strike/dip, kemiringan semu, problema tiga titik, kedalaman/ketebalan, singkapan, Diagram Palmer, dan data pengukuran kekar pada laporan.
+- 48 soal pilihan ganda.
+- 28 pernyataan benar/salah yang masing-masing memiliki pernyataan dan pembahasan.
+- 29 flashcard hafalan.
+- Simulasi ujian 20 soal acak.
+- Game kenali struktur (8 istilah), pasangkan istilah (8 pasangan), dan ronda ingatan (10 soal).
+- Progres, XP, dan jumlah jawaban benar disimpan di `localStorage` browser.
+
+Materi inti disusun berdasarkan laporan praktikum Geologi Struktur Riana Amelia (2026). Penjelasan konsep tambahan disajikan sebagai uraian belajar dasar. Data strike-dip pada tabel halaman 22 dipertahankan sesuai laporan: N15°/20°E, N265°/30°E, N277°/34°E, N320°/57°E, N197°/22°E.
+
+## Menjalankan lokal
+Buka `index.html` di browser atau jalankan server statis lokal.
 
 ## Deploy ke Vercel
-1. Ekstrak ZIP ini.
-2. Upload folder project ke repository GitHub.
-3. Di Vercel pilih **Add New → Project**, lalu import repository.
-4. Framework Preset: **Other**.
-5. Build Command: kosongkan.
-6. Output Directory: `.` (root).
-7. Klik Deploy.
-
-Tidak membutuhkan build step, database, atau server backend.
-
-## Teknologi
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- localStorage untuk menyimpan progres pada browser/perangkat yang sama.
-
-## Catatan materi
-Konten ringkas merujuk pada `Riana Amelia Laprak.pdf`, khususnya Bab I–IV. Penjelasan aplikasi pertambangan diringkas dari konteks laporan. Angka pengukuran kekar pada laporan (Strike N15°, N265°, N277°, N320°, N197°; Dip 20°E, 30°E, 34°E, 57°E, 22°E) dapat ditambahkan ke modul lanjutan; tidak diubah atau ditafsirkan ulang di website ini.
+1. Ekstrak ZIP.
+2. Upload folder proyek ke repository GitHub.
+3. Import repository di Vercel.
+4. Framework Preset: `Other`.
+5. Build Command dan Output Directory dapat dikosongkan/default; root proyek berisi `index.html`.
 
 ## Catatan teknis
-Python tidak berjalan langsung di browser statis Vercel. Interaksi game menggunakan JavaScript agar dapat berjalan tanpa backend. Python bisa digunakan terpisah untuk menyiapkan atau mengolah dataset materi.
+Proyek ini frontend statis. JavaScript berjalan langsung di browser. Python tidak dijalankan di hosting statis Vercel; jika kelak diperlukan pemrosesan Python, tambahkan backend/API terpisah.
