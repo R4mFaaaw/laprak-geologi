@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#dff3ff">
+  <meta name="description" content="Ruang belajar Geologi Struktur yang dibuat khusus untuk Riana.">
+  <title>Riana's GeoGarden — Belajar Geologi Struktur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sky sky-one"></div><div class="sky sky-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Riana's GeoGarden">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64"><path d="M31 31C18 4 2 13 9 29c4 9 15 10 22 7M33 31C46 4 62 13 55 29c-4 9-15 10-22 7M31 34C16 31 12 47 23 52c5 2 9-5 9-14M33 34c15-3 19 13 8 18-5 2-9-5-9-14" fill="#79c9f2" stroke="#398fca" stroke-width="2.2" stroke-linejoin="round"/><path d="M32 26v25M32 26c-5-6-8-7-10-6M32 26c5-6 8-7 10-6" fill="none" stroke="#286f9f" stroke-width="2" stroke-linecap="round"/></svg>
+      </span>
+      <span><b>Riana's GeoGarden</b><small>little steps, big discoveries</small></span>
+    </a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="#materi">Materi</a><a href="#latihan">Latihan</a><a href="#games">Mini games</a><a href="#progress">Progres</a>
+    </nav>
+    <button class="soft-button" id="resetProgress" title="Hapus progres tersimpan">Reset progres</button>
+  </header>
+
+  <main id="home">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> YOUR PERSONAL STUDY CORNER</div>
+        <h1>Hai, Riana!<br><span>Yuk, jelajahi</span><br>bumi hari ini.</h1>
+        <p>Belajar Geologi Struktur pelan-pelan, satu konsep setiap hari. Kamu pasti bisa, calon ahli pertambangan!</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#materi">Mulai belajar <span>↗</span></a>
+          <a class="text-link" href="#games">Main sambil belajar</a>
+        </div>
+        <div class="hero-note"><span class="tiny-butterfly">✦</span> Dibuat khusus untuk Riana Amelia <span class="tiny-butterfly">✦</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="sun"></div><div class="cloud cloud-a"></div><div class="cloud cloud-b"></div>
+        <div class="hill hill-back"></div><div class="hill hill-front"></div>
+        <div class="rock rock-a"></div><div class="rock rock-b"></div>
+        <div class="butterfly butterfly-a">✿</div><div class="butterfly butterfly-b">✿</div>
+        <div class="art-label"><span>FIELD NOTES</span><b>Earth is full of stories.</b></div>
+        <div class="floating-sticker">✧</div>
+      </div>
+    </section>
+
+    <section class="section-wrap quick-stats" id="progress">
+      <article class="stat-card"><span class="stat-icon blue">✧</span><div><small>Materi dipelajari</small><b id="statLessons">0 / 12</b></div></article>
+      <article class="stat-card"><span class="stat-icon yellow">★</span><div><small>Total bintang</small><b id="statXp">0 XP</b></div></article>
+      <article class="stat-card"><span class="stat-icon pink">♡</span><div><small>Jawaban benar</small><b id="statCorrect">0</b></div></article>
+      <article class="stat-card"><span class="stat-icon green">◷</span><div><small>Semangat hari ini</small><b id="dailyMessage">Mulai dari 5 menit</b></div></article>
+    </section>
+
+    <section class="section-wrap content-section" id="materi">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE STUDY GARDEN</div><h2>Pilih petualanganmu</h2><p>Materi ringkas yang diambil dari laporan praktikum Geologi Struktur.</p></div>
+        <span class="chapter-count">12 topik belajar</span>
+      </div>
+      <div class="lesson-layout">
+        <aside class="lesson-aside">
+          <div class="aside-bubble">Belajar sedikit<br><b>setiap hari</b> 🌤</div>
+          <div class="progress-track"><span id="overallBar"></span></div>
+          <small id="overallText">0% perjalanan selesai</small>
+          <div class="aside-tip"><b>Catatan kecil</b><p>Setelah membaca materi, coba jawab kuis singkat supaya konsepnya lebih melekat.</p></div>
+        </aside>
+        <div class="lesson-grid" id="lessonGrid"></div>
+      </div>
+    </section>
+
+    <section class="section-wrap content-section split-section" id="latihan">
+      <div class="section-heading"><div><div class="eyebrow">PRACTICE TIME</div><h2>Uji ingatanmu</h2><p>Latihan singkat untuk mengulang istilah dan konsep penting.</p></div></div>
+      <div class="practice-grid">
+        <button class="practice-card" data-quiz="multiple"><span class="practice-icon">A/B</span><span><b>Kuis pilihan ganda</b><small>Pilih jawaban paling tepat</small></span><span class="arrow">↗</span></button>
+        <button class="practice-card" data-quiz="truefalse"><span class="practice-icon mint">✓</span><span><b>Benar atau salah</b><small>Periksa pemahaman konsep</small></span><span class="arrow">↗</span></button>
+        <button class="practice-card" data-quiz="flash"><span class="practice-icon lilac">▤</span><span><b>Flashcard hafalan</b><small>Ingat definisi tanpa mengintip</small></span><span class="arrow">↗</span></button>
+        <button class="practice-card" data-quiz="exam"><span class="practice-icon peach">⌁</span><span><b>Simulasi ujian</b><small>10 pertanyaan campuran</small></span><span class="arrow">↗</span></button>
+      </div>
+      <div class="quiz-panel hidden" id="quizPanel" aria-live="polite"></div>
+    </section>
+
+    <section class="section-wrap content-section" id="games">
+      <div class="section-heading"><div><div class="eyebrow">PLAY & LEARN</div><h2>Sudut permainan</h2><p>Istirahat sebentar sambil tetap mengasah ingatan.</p></div></div>
+      <div class="game-grid">
+        <article class="game-card game-card-blue"><div class="game-art strata-art"><span></span><span></span><span></span></div><div class="game-copy"><small>GAME 01</small><h3>Kenali struktur</h3><p>Amati bentuk lapisan, lalu pilih nama struktur yang sesuai.</p><button class="small-button" data-game="structure">Mainkan</button></div></article>
+        <article class="game-card game-card-pink"><div class="game-art symbol-art"><span>↗</span><span>⌁</span><span>∿</span></div><div class="game-copy"><small>GAME 02</small><h3>Pasangkan istilah</h3><p>Cocokkan istilah geologi dengan penjelasannya.</p><button class="small-button" data-game="match">Mainkan</button></div></article>
+        <article class="game-card game-card-yellow"><div class="game-art butterfly-art"><span>✧</span><span>🦋</span><span>✧</span></div><div class="game-copy"><small>GAME 03</small><h3>Ronda ingatan</h3><p>Jawab cepat pertanyaan acak dan kumpulkan bintang.</p><button class="small-button" data-game="quick">Mainkan</button></div></article>
+      </div>
+      <div class="game-panel hidden" id="gamePanel" aria-live="polite"></div>
+    </section>
+
+    <section class="section-wrap encouragement">
+      <div class="encouragement-butterfly">🦋</div>
+      <div><div class="eyebrow">A LITTLE REMINDER</div><h2>Pelan-pelan juga tetap maju.</h2><p>Kalau ada materi yang terasa sulit, istirahat sebentar lalu coba lagi. Kamu sedang membangun pemahaman, bukan mengejar kesempurnaan.</p></div>
+      <div class="signature">you've got this, Riana <span>♡</span></div>
+    </section>
+  </main>
+  <footer><span>Riana's GeoGarden</span><span>Made with care, sky blue & butterflies.</span><a href="#home">Kembali ke atas ↑</a></footer>
+
+  <dialog id="lessonDialog" class="modal"><button class="modal-close" data-close>×</button><div id="lessonContent"></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
